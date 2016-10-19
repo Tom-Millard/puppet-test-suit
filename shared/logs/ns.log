@@ -1,0 +1,17 @@
+/etc/named/zones/ns.puppet.dev:16: ignoring out-of-zone data (master.puppet.dev)
+/etc/named/zones/ns.puppet.dev:17: ignoring out-of-zone data (lb.puppet.dev)
+/etc/named/zones/ns.puppet.dev:18: ignoring out-of-zone data (a.puppet.dev)
+/etc/named/zones/ns.puppet.dev:19: ignoring out-of-zone data (b.puppet.dev)
+/etc/named/zones/ns.puppet.dev:20: ignoring out-of-zone data (c.puppet.dev)
+/etc/named/zones/ns.puppet.dev:21: ignoring out-of-zone data (d.puppet.dev)
+zone ns.puppet.dev/IN: loaded serial 3
+OK
+/etc/named/zones/db.168.192:13: ignoring out-of-zone data (ns.puppet.dev)
+/etc/named/zones/db.168.192:16: ignoring out-of-zone data (master.puppet.dev)
+/etc/named/zones/db.168.192:17: ignoring out-of-zone data (lb.puppet.dev)
+/etc/named/zones/db.168.192:18: ignoring out-of-zone data (a.puppet.dev)
+/etc/named/zones/db.168.192:19: ignoring out-of-zone data (b.puppet.dev)
+/etc/named/zones/db.168.192:20: ignoring out-of-zone data (c.puppet.dev)
+/etc/named/zones/db.168.192:21: ignoring out-of-zone data (d.puppet.dev)
+zone 168.192.in-addr.arpa/IN: loaded serial 3
+OK
