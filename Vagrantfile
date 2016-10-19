@@ -4,8 +4,8 @@ Vagrant.configure(2) do |config|
     config.vm.define "node-#{box['name']}" do |node|
       node.vm.hostname = "node-#{box['name']}"
       node.vm.network "private_network", ip: box["host"]
-      node.vm.box = "http://192.168.1.140/boxes/efiling-centos-7.box"
-      node.vm.synced_folder './shared', "/vagrant", :nfs => { :mount_options => ["dmode=777","fmode=666"] }
+      node.vm.box = "http://192.168.1.140/boxes/centos-7-seLinux-on.box"
+      node.vm.synced_folder './shared', "/shared", :nfs => { :mount_options => ["dmode=777","fmode=666"] }
       node.ssh.pty = true
 
       node.vm.provider :virtualbox do |vb|
@@ -14,11 +14,8 @@ Vagrant.configure(2) do |config|
         vb.cpus = 1
       end
 
-      node.vm.provision "shell" do |s|
-          s.inline = "
-            sudo rpm -ivh https://yum.puppetlabs.com/puppetlabs-release-pc1-el-7.noarch.rpm;
-            sudo yum -y install wget puppet;
-          "
+      if(!box['shell'].nil?)
+        node.vm.provision "shell", path: box['shell']
       end
 
     end

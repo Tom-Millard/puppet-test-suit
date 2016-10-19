@@ -1,0 +1,9 @@
+zone "ns.puppet.dev" {
+    type master;
+    file "/etc/named/zones/db.ns.puppet.dev";
+};
+
+zone "192.168.in-addr.arpa" {
+    type master;
+    file "/etc/named/zones/db.168.192";  # 192.168.0.0/16 subnet
+};
