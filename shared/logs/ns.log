@@ -1,17 +1,31 @@
-/etc/named/zones/ns.puppet.dev:16: ignoring out-of-zone data (master.puppet.dev)
-/etc/named/zones/ns.puppet.dev:17: ignoring out-of-zone data (lb.puppet.dev)
-/etc/named/zones/ns.puppet.dev:18: ignoring out-of-zone data (a.puppet.dev)
-/etc/named/zones/ns.puppet.dev:19: ignoring out-of-zone data (b.puppet.dev)
-/etc/named/zones/ns.puppet.dev:20: ignoring out-of-zone data (c.puppet.dev)
-/etc/named/zones/ns.puppet.dev:21: ignoring out-of-zone data (d.puppet.dev)
+
+/etc/named/zones/db.ns.puppet.dev:16: ignoring out-of-zone data (master.puppet.dev)
+/etc/named/zones/db.ns.puppet.dev:17: ignoring out-of-zone data (lb.puppet.dev)
+/etc/named/zones/db.ns.puppet.dev:18: ignoring out-of-zone data (a.puppet.dev)
+/etc/named/zones/db.ns.puppet.dev:19: ignoring out-of-zone data (b.puppet.dev)
+/etc/named/zones/db.ns.puppet.dev:20: ignoring out-of-zone data (c.puppet.dev)
+/etc/named/zones/db.ns.puppet.dev:21: ignoring out-of-zone data (d.puppet.dev)
 zone ns.puppet.dev/IN: loaded serial 3
 OK
-/etc/named/zones/db.168.192:13: ignoring out-of-zone data (ns.puppet.dev)
-/etc/named/zones/db.168.192:16: ignoring out-of-zone data (master.puppet.dev)
-/etc/named/zones/db.168.192:17: ignoring out-of-zone data (lb.puppet.dev)
-/etc/named/zones/db.168.192:18: ignoring out-of-zone data (a.puppet.dev)
-/etc/named/zones/db.168.192:19: ignoring out-of-zone data (b.puppet.dev)
-/etc/named/zones/db.168.192:20: ignoring out-of-zone data (c.puppet.dev)
-/etc/named/zones/db.168.192:21: ignoring out-of-zone data (d.puppet.dev)
 zone 168.192.in-addr.arpa/IN: loaded serial 3
 OK
+● named.service - Berkeley Internet Name Domain (DNS)
+   Loaded: loaded (/usr/lib/systemd/system/named.service; enabled; vendor preset: disabled)
+   Active: active (running) since Wed 2016-10-19 12:18:45 UTC; 37s ago
+  Process: 27749 ExecStop=/bin/sh -c /usr/sbin/rndc stop > /dev/null 2>&1 || /bin/kill -TERM $MAINPID (code=exited, status=0/SUCCESS)
+  Process: 27761 ExecStart=/usr/sbin/named -u named $OPTIONS (code=exited, status=0/SUCCESS)
+  Process: 27759 ExecStartPre=/bin/bash -c if [ ! "$DISABLE_ZONE_CHECKING" == "yes" ]; then /usr/sbin/named-checkconf -z /etc/named.conf; else echo "Checking of zone files is disabled"; fi (code=exited, status=0/SUCCESS)
+ Main PID: 27763 (named)
+   CGroup: /system.slice/named.service
+           └─27763 /usr/sbin/named -u named
+
+Oct 19 12:18:45 node-ns named[27763]: zone ns.puppet.dev/IN: loaded serial 3
+Oct 19 12:18:45 node-ns named[27763]: zone localhost.localdomain/IN: loaded serial 0
+Oct 19 12:18:45 node-ns named[27763]: /etc/named/zones/db.192.168:13: ignoring out-of-zone data (ns.puppet.dev)
+Oct 19 12:18:45 node-ns named[27763]: zone 168.192.in-addr.arpa/IN: loaded serial 3
+Oct 19 12:18:45 node-ns named[27763]: zone localhost/IN: loaded serial 0
+Oct 19 12:18:45 node-ns named[27763]: zone 1.0.0.127.in-addr.arpa/IN: loaded serial 0
+Oct 19 12:18:45 node-ns named[27763]: zone 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa/IN: loaded serial 0
+Oct 19 12:18:45 node-ns named[27763]: all zones loaded
+Oct 19 12:18:45 node-ns named[27763]: running
+Oct 19 12:18:45 node-ns systemd[1]: Started Berkeley Internet Name Domain (DNS).

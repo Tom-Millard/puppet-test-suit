@@ -14,8 +14,14 @@ Vagrant.configure(2) do |config|
         vb.cpus = 1
       end
 
+      script = "sudo sh /shared/code/sh/common.sh; \n"
+
       if(!box['shell'].nil?)
-        node.vm.provision "shell", path: box['shell']
+        script.concat("sudo sh " + box['shell'] + "; \n");
+      end
+
+      Vagrant.configure("2") do |config|
+        node.vm.provision "shell", inline: script
       end
 
     end

@@ -1,5 +1,10 @@
 boxes:
   -
+    host: '192.168.33.142'
+    name: 'NS'
+    shell: '/shared/code/sh/ns.sh'
+    private_name: 'ns.puppet.dev'
+  -
     host: '192.168.33.143'
     name: 'master'
     private_name: 'master.puppet.dev'
@@ -23,8 +28,3 @@ boxes:
     host: '192.168.33.148'
     name: 'd'
     private_name: 'd.puppet.dev'
-  -
-    host: '192.168.33.142'
-    name: 'NS'
-    shell: './shared/code/script/ns.sh'
-    private_name: 'ns.puppet.dev'
