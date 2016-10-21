@@ -1,5 +1,4 @@
 #!/bin/bash
-echo '========> Running ns.sh';
 echo '' > /shared/logs/ns.log;
 sudo yum -y install bind bind-utils;
 sudo cp /shared/templates/named.conf /etc/named.conf;
