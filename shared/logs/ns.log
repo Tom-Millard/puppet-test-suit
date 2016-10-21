@@ -1,8 +1,0 @@
-
-zone local.puppet.dev/IN: loaded serial 3
-OK
-zone 192.168.in-addr.arpa/IN: loaded serial 3
-OK
-● named.service - Berkeley Internet Name Domain (DNS)
-   Loaded: loaded (/usr/lib/systemd/system/named.service; disabled; vendor preset: disabled)
-   Active: inactive (dead)
