@@ -1,0 +1,21 @@
+$TTL    604800
+@       IN      SOA     ns.local.puppet.dev. admin.local.puppet.dev. (
+              3         ; Serial
+             604800     ; Refresh
+              86400     ; Retry
+            2419200     ; Expire
+             604800 )   ; Negative Cache TTL
+
+; name servers - NS records
+                          IN      NS      node-ns.local.puppet.dev.
+
+; name servers - A records
+node-ns.local.puppet.dev.            IN      A       192.168.33.142
+
+; 10.128.0.0/16 - A records
+node-master.local.puppet.dev.        IN      A      192.168.33.143
+node-lb.local.puppet.dev.            IN      A      192.168.33.144
+node-a.local.puppet.dev.             IN      A      192.168.33.145
+node-b.local.puppet.dev.             IN      A      192.168.33.146
+node-c.local.puppet.dev.             IN      A      192.168.33.147
+node-d.local.puppet.dev.             IN      A      192.168.33.148

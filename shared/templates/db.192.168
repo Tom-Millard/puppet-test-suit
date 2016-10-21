@@ -1,5 +1,5 @@
 $TTL    604800
-@       IN      SOA     ns.puppet.dev. admin.puppet.dev. (
+@       IN      SOA     ns.local.puppet.dev. admin.local.puppet.dev. (
               3         ; Serial
              604800     ; Refresh
               86400     ; Retry
@@ -7,13 +7,13 @@ $TTL    604800
              604800 )   ; Negative Cache TTL
 
 ; name servers - NS records
-          IN      NS      ns.puppet.dev.
+          IN      NS      node-ns.local.puppet.dev.
 
 ; PTR Records
-142.33   IN      PTR     ns.puppet.dev.         ;192.168.33.142
-143.33   IN      PTR     master.puppet.dev.     ;192.168.33.143
-144.33   IN      PTR     lb.puppet.dev.         ;192.168.33.144
-145.33   IN      PTR     a.puppet.dev.          ;192.168.33.145
-146.33   IN      PTR     b.puppet.dev.          ;192.168.33.146
-147.33   IN      PTR     c.puppet.dev.          ;192.168.33.147
-148.33   IN      PTR     d.puppet.dev.          ;192.168.33.148
+142.33   IN      PTR     node-ns.local.puppet.dev.         ;192.168.33.142
+143.33   IN      PTR     node-master.local.puppet.dev.     ;192.168.33.143
+144.33   IN      PTR     node-lb.local.puppet.dev.         ;192.168.33.144
+145.33   IN      PTR     node-a.local.puppet.dev.          ;192.168.33.145
+146.33   IN      PTR     node-b.local.puppet.dev.          ;192.168.33.146
+147.33   IN      PTR     node-c.local.puppet.dev.          ;192.168.33.147
+148.33   IN      PTR     node-d.local.puppet.dev.          ;192.168.33.148

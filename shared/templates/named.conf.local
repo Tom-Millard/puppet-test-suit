@@ -1,6 +1,6 @@
-zone "ns.puppet.dev" {
+zone "local.puppet.dev" {
     type master;
-    file "/etc/named/zones/db.ns.puppet.dev";
+    file "/etc/named/zones/db.local.puppet.dev";
 };
 
 zone "168.192.in-addr.arpa" {
