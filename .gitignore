@@ -1,3 +1,5 @@
 .vagrant
 shared/log
+shared/puppet-manifest
+
 puppet-manifest
