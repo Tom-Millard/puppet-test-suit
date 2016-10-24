@@ -18,3 +18,5 @@ Restart puppet server
 Force agent to propergate
 
 `sudo -i puppet agent --server node-master.local.puppet.dev --waitforcert 5 --test`
+
+(test code not intended to be used by people)
