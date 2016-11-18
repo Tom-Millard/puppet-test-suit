@@ -1,5 +1,5 @@
 .vagrant
-shared/log
-shared/puppet-manifest
+shared/logs
+shared/puppet
 
 puppet-manifest
