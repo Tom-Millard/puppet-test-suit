@@ -30,3 +30,8 @@ sudo cp /shared/templates/ntp.conf /etc/ntp.conf;
 ##
 sudo systemctl restart ntpd;
 sudo systemctl enable ntpd;
+
+##
+#  Copy over resolv
+##
+sudo cp /shared/templates/resolv.conf /etc/resolv.conf;

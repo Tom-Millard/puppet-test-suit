@@ -18,12 +18,15 @@ Vagrant.configure(2) do |config|
       end
 
       script = "sudo sh /shared/code/sh/common.sh; \n"
+      script.concat("sudo sh /shared/code/sh/puppet-agent.sh; \n");
 
       if !box['shell'].nil?
         script.concat("sudo sh #{box['shell']}; \n")
       end
 
-      script.concat("sudo sh /shared/code/sh/puppet-agent.sh; \n")
+      if box['name'] != 'node-ns'
+        script.concat("sudo cp /shared/templates/resolv.conf /etc; \n")
+      end
 
       node.vm.provision "shell", inline: script, run: "always"
 

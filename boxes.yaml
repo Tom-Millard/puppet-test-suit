@@ -6,20 +6,26 @@ boxes:
     private_name: 'node-ns.local.puppet.dev'
   -
     host: '192.168.33.144'
-    name: 'node-lb'
-    private_name: 'node-lb.local.puppet.dev'
-  -
-    host: '192.168.33.145'
     name: 'node-a'
     private_name: 'node-a.local.puppet.dev'
   -
-    host: '192.168.33.146'
+    host: '192.168.33.145'
     name: 'node-b'
     private_name: 'node-b.local.puppet.dev'
   -
+    host: '192.168.33.146'
+    name: 'node-c'
+    private_name: 'node-c.local.puppet.dev'
+  -
     host: '192.168.33.143'
     name: 'node-master'
-    shell: '/shared/code/sh/master.sh'
     private_name: 'node-master.local.puppet.dev'
+    shell: './shared/puppet/bootstrap/beforeInstall.sh develop'
     memory: 1024
+    cpu: 2
+  -
+    host: '192.168.33.147'
+    name: 'node-db'
+    private_name: 'node-db.local.puppet.dev'
+    memory: 512
     cpu: 2
